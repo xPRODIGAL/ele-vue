@@ -1,0 +1,40 @@
+@contentType = application/json
+
+###
+GET https://restapi.amap.com/v3/geocode/regeo
+
+{
+  "key":"753de640789136a98504fc006dc7dee3",
+  "location":[118.801584,32.056226]
+}
+
+###
+
+POST http://192.168.1.181:3000/mock/152/asip/open/OnlineBooking/query/web HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "paging":{
+    "pageNumber": 1,
+    "pageSize": 5
+  },
+  "canteenId": 353449246441078784,
+  "name": null,
+  "state": "UNPUBLISHED",
+  "period": null,
+  "startTime": null,
+  "endTime": null
+}
+
+###
+
+POST https://c.iwanmen.com/element/api/posts/sms_send HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "sid":null,
+  "token": null,
+  "appid": null,
+  "templateid": null,
+  "phone":18950188764
+}
