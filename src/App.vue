@@ -35,7 +35,7 @@ export default {
           // console.log(data);
           axios.get('https://restapi.amap.com/v3/geocode/regeo', {
             params: {
-              key: "753de640789136a98504fc006dc7dee3",
+              key: "keyId",
               location: data.position.lng + ',' + data.position.lat,
               radius: 1000,
               extensions: 'all',
